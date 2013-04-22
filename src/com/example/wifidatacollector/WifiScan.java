@@ -13,15 +13,15 @@ import android.widget.Toast;
 
 public class WifiScan extends BroadcastReceiver{
 	private static final String TAG = "WiFiScan";
-	WifiDataCollectorActivity wifiDemo;
+	WifiDataCollectorActivity WifiDataCollector;
 
-	  public WifiScan(WifiDataCollectorActivity wifiDemo) {
+	  public WifiScan(WifiDataCollectorActivity WifiDataCollector) {
 	    super();
-	    this.wifiDemo = wifiDemo;
+	    this.WifiDataCollector = WifiDataCollector;
 	  }
 
 	  public void onReceive(Context c, Intent intent) {
-	    List<ScanResult> results = wifiDemo.wifi.getScanResults();
+	    List<ScanResult> results = WifiDataCollector.wifi.getScanResults();
 	    ScanResult bestSignal = null;
 	    for (ScanResult result : results) {
 	      if (bestSignal == null
@@ -31,7 +31,7 @@ public class WifiScan extends BroadcastReceiver{
 
 	    String message = String.format("%s networks found. %s is the strongest.",
 	        results.size(), bestSignal.SSID);
-	    Toast.makeText(wifiDemo, message, Toast.LENGTH_LONG).show();
+	    Toast.makeText(WifiDataCollector, message, Toast.LENGTH_LONG).show();
 
 	    Log.d(TAG, "onReceive() message: " + message);
 	  }

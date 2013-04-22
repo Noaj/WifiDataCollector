@@ -2,6 +2,8 @@ package com.example.wifidatacollector;
 
 import java.util.List;
 
+import com.example.wifidatacollector.R;
+
 import android.net.wifi.WifiConfiguration;
 import android.net.wifi.WifiInfo;
 import android.net.wifi.WifiManager;
@@ -14,6 +16,7 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 import android.support.v4.app.NavUtils;
 import android.annotation.TargetApi;
 import android.content.BroadcastReceiver;
@@ -101,8 +104,15 @@ public class WifiDataCollectorActivity extends Activity implements OnClickListen
     }
 
 	@Override
-	public void onClick(View arg0) {
+	public void onClick(View view) {
 		// TODO Auto-generated method stub
+		Toast.makeText(this, "On Click Clicked. Toast to that!!!",
+				Toast.LENGTH_LONG).show();
+
+		if (view.getId() == R.id.buttonScan) {
+			Log.d("Wifi Data Collector", "onClick() wifi.startScan()");
+			wifi.startScan();
+		}
 		
 	}
 

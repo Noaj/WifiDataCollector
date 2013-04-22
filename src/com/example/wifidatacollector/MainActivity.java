@@ -25,6 +25,7 @@ public class MainActivity extends Activity {
     public void collectWifiData(View view) {
         // Do something in response to button
     	Intent intent = new Intent(this, WifiDataCollectorActivity.class);
+    	startActivity(intent);
     	
     }
     

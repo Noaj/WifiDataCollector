@@ -16,7 +16,7 @@
         android:layout_alignParentTop="true"
         android:layout_marginTop="84dp"
         android:onClick="collectWifiData"
-        android:text="@string/collect_wifi_data" />
+        android:text="collect_wifi_data" />
 
     <Button
         android:id="@+id/button1"
@@ -25,7 +25,7 @@
         android:layout_alignLeft="@+id/button3"
         android:layout_below="@+id/button3"
         android:onClick="collectNetworkData"
-        android:text="@string/collect_network_data" />
+        android:text="collect_network_data" />
 
     <Button
         android:id="@+id/button2"
@@ -34,6 +34,6 @@
         android:layout_alignLeft="@+id/button1"
         android:layout_below="@+id/button1"
         android:onClick="settings"
-        android:text="@string/setings" />
+        android:text="setings" />
 
 </RelativeLayout>

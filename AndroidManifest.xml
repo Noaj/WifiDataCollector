@@ -39,5 +39,8 @@
                 android:value="com.example.wifidatacollector.WifiDataCollectorActivity" />
         </activity>
     </application>
+    
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"></uses-permission>
+  	<uses-permission android:name="android.permission.CHANGE_WIFI_STATE"></uses-permission>
 
 </manifest>
